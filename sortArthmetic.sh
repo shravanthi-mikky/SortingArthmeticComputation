@@ -1,7 +1,7 @@
 #! /bin/bash -x
 declare -A  computation
 
-echo "Sorting Arthmetic Computation Probelm "
+echo " Sorting Arthmetic Computation Problem "
 read -p "Enter value of a : " a
 read -p "Enter value of b : " b
 read -p " Enter value of c : " c
@@ -25,3 +25,24 @@ do
 
 done
 echo ${array[@]}
+
+flag=1;
+for (( i = 1; i <=4; i++ ))
+do
+    flag=0;
+    for ((j = 1; j<=4; j++ ))
+    do
+        if [[ ${array[$j]} -gt ${array[$(($j+1))]} ]]
+        then
+            temp=${array[$j]};
+            array[$j]=${array[$(($j+1))]};
+            array[$(($j+1))]=$temp;
+            flag=1;
+        fi
+    done
+
+    if [[ $flag -eq 0 ]]; then
+          break;
+    fi
+done
+echo ${array[*]}
