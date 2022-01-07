@@ -1,4 +1,6 @@
 #! /bin/bash -x
+declare -A  computation
+
 echo "Sorting Arthmetic Computation Probelm "
 read -p "Enter value of a : " a
 read -p "Enter value of b : " b
@@ -12,3 +14,8 @@ comp3=$(($c + $a / $b))
 echo $comp3
 comp4=$(( $a % $b + $c ))
 echo $comp4
+computation[comp1]=$comp1
+computation[comp2]=$comp2
+computation[comp3]=$comp3
+computation[comp4]=$comp4
+echo ${computation[@]}
