@@ -10,3 +10,5 @@ comp2=$(( $a * $b * $c ))
 echo $comp2
 comp3=$(($c + $a / $b))
 echo $comp3
+comp4=$(( $a % $b + $c ))
+echo $comp4
