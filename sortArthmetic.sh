@@ -32,7 +32,7 @@ do
     flag=0;
     for ((j = 1; j<=4; j++ ))
     do
-        if [[ ${array[$j]} -gt ${array[$(($j+1))]} ]]
+        if [[ ${array[$j]} -lt ${array[$(($j+1))]} ]]
         then
             temp=${array[$j]};
             array[$j]=${array[$(($j+1))]};
