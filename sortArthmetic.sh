@@ -19,3 +19,9 @@ computation[comp2]=$comp2
 computation[comp3]=$comp3
 computation[comp4]=$comp4
 echo ${computation[@]}
+for(( i=1;i<=4;i++))
+do
+	array[$i]=${computation[comp$i]}
+
+done
+echo ${array[@]}
